@@ -1,7 +1,5 @@
 package modelo;
 
-import modelo.Bicicleta;
-
 import java.util.ArrayList;
 
 public class Local {
@@ -34,6 +32,7 @@ public class Local {
         }
 
         System.out.println("-------------- INVENTARIO BICICLETAS LOCAL -------------");
+        System.out.printf("Hay %d bicicleta(s) en el local.%n",inventarioBicicletas.size());
         for (Bicicleta bic : inventarioBicicletas) {
             System.out.println(bic);
         }

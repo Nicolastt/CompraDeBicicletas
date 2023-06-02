@@ -1,7 +1,5 @@
 package modelo;
 
-import modelo.Bicicleta;
-
 import java.util.ArrayList;
 
 public class Cliente {
@@ -23,7 +21,7 @@ public class Cliente {
 
     public void solicitarBicicleta(Local local, Bicicleta bicicleta, Vendedor vendedor) {
         if (haCompradoBicicleta) {
-            System.out.println("Ya ha comprado una bicicleta antes, no puede volver a comprar!");
+            System.out.println("Cliente recurrente! No puede comprar otra bici!");
             return;
         }
 
@@ -33,7 +31,7 @@ public class Cliente {
         }
 
         if (!haySaldoSuficiente(bicicleta)) {
-            System.out.println("ERROR: ¡No tiene el dinero suficiente para comprar la bicicleta!");
+            System.out.println("ERROR: ¡No tiene saldo suficiente!");
             haCompradoBicicleta = false;
             return;
         }
@@ -52,7 +50,7 @@ public class Cliente {
     private void comprarBicicleta(Bicicleta bicicleta) {
 
         this.saldo -= bicicleta.getPrecio();
-        System.out.printf("NOTIFICACIÓN: Se ha quitado %.2f del saldo de %s%n", bicicleta.getPrecio(), this.nombre);
+        System.out.printf("NOTIFICACIÓN: Se ha retirado $%.2f del saldo de %s%n", bicicleta.getPrecio(), this.nombre);
         System.out.println("--------------------------------------------------------");
         haCompradoBicicleta = true;
     }
@@ -76,8 +74,8 @@ public class Cliente {
                 "--------------------------------------------------------" + "\n" +
                 "Nombre: " + this.nombre + "\n" +
                 "Saldo: " + this.saldo + "\n" +
-                "Direccion: " + this.direccion + "\n" +
-                "Telefono: " + this.telefono + "\n" +
+                "Dirección: " + this.direccion + "\n" +
+                "Teléfono: " + this.telefono + "\n" +
                 "HaCompradoBicicleta?: " + this.haCompradoBicicleta + "\n" +
                 "--------------------------------------------------------";
     }
@@ -97,7 +95,8 @@ public class Cliente {
             System.out.println("-------------------------------------------");
         }
 
-        System.out.println("------------- INVENTARIO BICICLETAS CLIENTE ------------");
+        System.out.println("---------------- PERTENENCIAS DEL CLIENTE --------------");
+        System.out.printf("%s tiene %d bicicleta(s).%n",this.nombre, inventarioPertenecias.size());
         for (Bicicleta bic : inventarioPertenecias) {
             System.out.println(bic);
         }

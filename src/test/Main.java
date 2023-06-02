@@ -9,19 +9,19 @@ public class Main {
         Cambio cambio1 = new Cambio("Electrónico", 4);
         Llanta llanta1 = new Llanta("Westwood", "Magnesio");
 
-        Bicicleta bicicleta1 = new Bicicleta("MarcaX", "ModeloX", "rojo", 1500, freno1, llanta1, cambio1);
-        Bicicleta bicicleta2 = new Bicicleta("MarcaY", "ModeloY", "azul", 1500, freno1, llanta1, cambio1);
-        Bicicleta bicicleta3 = new Bicicleta("MarcaZ", "ModeloZ", "verde", 1500, freno1, llanta1, cambio1);
+        Bicicleta bicicleta1 = new Bicicleta("MarcaX", "ModeloX", "Rojo", 1500, freno1, llanta1, cambio1);
+        Bicicleta bicicleta2 = new Bicicleta("MarcaY", "ModeloY", "Azul", 1500, freno1, llanta1, cambio1);
+        Bicicleta bicicleta3 = new Bicicleta("MarcaZ", "ModeloZ", "Verde", 1500, freno1, llanta1, cambio1);
 
-        Cliente cliente1 = new Cliente("Cliente1", 300, "Quito", "123");
-        Cliente cliente2 = new Cliente("Cliente2", 5000, "Cuenca", "456");
+        Cliente cliente1 = new Cliente("Nico", 300, "Quito", "123");
+        Cliente cliente2 = new Cliente("Richi", 5000, "Cuenca", "456");
         Vendedor vendedor1 = new Vendedor("Vendedor1", "0101");
 
         local1.addVendedor(vendedor1);
 
         local1.addBicicleta(bicicleta1);
         local1.addBicicleta(bicicleta2);
-        //local1.addBicicleta(bicicleta3);
+        //local1.addBicicleta(bicicleta3); No añadimos la bicicleta3
 
         local1.mostrarInventario();
 

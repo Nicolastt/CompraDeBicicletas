@@ -1,10 +1,5 @@
 package modelo;
 
-import modelo.Bicicleta;
-import modelo.Cliente;
-import modelo.Factura;
-import modelo.Local;
-
 public class Vendedor {
     private final String nombre;
     private final String id;

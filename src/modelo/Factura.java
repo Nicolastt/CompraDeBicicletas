@@ -1,8 +1,5 @@
 package modelo;
 
-import modelo.Bicicleta;
-import modelo.Cliente;
-
 public class Factura {
     private final Bicicleta bicicleta;
     private final Cliente cliente;
@@ -17,11 +14,11 @@ public class Factura {
     public void imprimirFactura() {
         System.out.println("<---------------------- FACTURA ----------------------->");
         System.out.println("---------------------------- * -------------------------");
-        System.out.println("Venta: modelo.Bicicleta N° " + bicicleta.getIdentificador() + "\n\tMarca: " + bicicleta.getMarca() + "\n\tModelo: " + bicicleta.getModelo()+ "\n\tColor: " + bicicleta.getColor());
-        System.out.println("modelo.Cliente: " + cliente.getNombre());
+        System.out.println("Venta: Bicicleta N° " + bicicleta.getIdentificador() + "\n\tMarca: " + bicicleta.getMarca() + "\n\tModelo: " + bicicleta.getModelo()+ "\n\tColor: " + bicicleta.getColor());
+        System.out.println("Cliente: " + cliente.getNombre());
         System.out.println("\tDirección: " + cliente.getDireccion());
         System.out.println("\tTeléfono: " + cliente.getTelefono());
-        System.out.println("modelo.Vendedor: " + vendedor.getNombre() + " \n\tID: " + vendedor.getId());
+        System.out.println("Vendedor: " + vendedor.getNombre() + " \n\tID: " + vendedor.getId());
         System.out.println("---------------------------- * -------------------------");
         System.out.println("Monto Total: $" + bicicleta.getPrecio());
         System.out.println("<------------------------------------------------------>");

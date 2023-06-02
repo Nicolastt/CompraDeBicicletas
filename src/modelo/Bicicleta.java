@@ -20,20 +20,20 @@ public class Bicicleta {
         this.llanta = llanta;
         this.cambios = cambios;
         this.identificador = ++numeroDeBicicletas;
-        System.out.printf("\rExisten %d bicicletas (No necesariamente en el local)%n", numeroDeBicicletas);
+        System.out.printf("Se han creado %d bicicleta(s). %n", numeroDeBicicletas);
     }
 
     @Override
     public String toString() {
         return "--------------------------------------------------------" + "\n" +
-        "modelo.Bicicleta N° " + identificador + "\n" +
+        "Bicicleta N° " + identificador + "\n" +
                 "--------------------------------------------------------" + "\n" +
                 "Marca: " + this.marca + "\n" +
                 "Modelo: " + this.modelo + "\n" +
                 "Color: " + this.color + "\n" +
                 "Precio: " + this.precio + "\n" +
-                "modelo.Freno: " + freno.toString() + "\n"+
-                "modelo.Llanta: " + llanta.toString()+ "\n" +
+                "Freno: " + freno.toString() + "\n"+
+                "Llanta: " + llanta.toString()+ "\n" +
                 "Cambios: " + cambios.toString();
     }
 
